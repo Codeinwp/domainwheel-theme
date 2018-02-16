@@ -1,0 +1,13 @@
+.idea
+demo
+yarn-error.log
+node_modules
+dist
+domainwheel-built
+logs
+dist
+artifact
+vendor
+bin
+tmp
+package-lock.json

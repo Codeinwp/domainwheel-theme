@@ -1,0 +1,11 @@
+{
+  "name": "namegenerator",
+  "version": "1.0.0",
+  "category": "themes",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-theme-fleet": "github:codeinwp/grunt-theme-fleet",
+    "load-project-config": "~0.2.0"
+  }
+}

@@ -1,0 +1,6 @@
+deploy:
+  tasks:
+    - 'mkdir:dist'
+    - 'mkdir:artifact'
+    - 'copy:full'
+    -  'compress:full'
