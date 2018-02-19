@@ -44,7 +44,8 @@ if ( ! function_exists( 'namegenerator_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'namegenerator' ),
+			'primary-menu' => esc_html__( 'Primary', 'namegenerator' ),
+			'footer-menu' => esc_html__( 'Footer', 'namegenerator' ),
 		) );
 
 		/*
@@ -117,7 +118,7 @@ add_action( 'widgets_init', 'namegenerator_widgets_init' );
  * Enqueue scripts and styles.
  */
 function namegenerator_scripts() {
-	wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'namegenerator-style', get_stylesheet_uri() );
 

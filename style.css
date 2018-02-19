@@ -48,10 +48,16 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	position: relative;
+	min-height: 100%;
 }
 
-body {
-	margin: 0;
+html body {
+	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 article,
@@ -506,17 +512,18 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
 	width: 100%;
 }
 
 .main-navigation ul {
-	display: none;
+	position: static;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	opacity: 0;
+	transition: all.3s ease;
+	height: 0;
+	display: block;
 }
 
 .main-navigation ul ul {
@@ -547,28 +554,35 @@ a:hover, a:active {
 	left: auto;
 }
 
-.main-navigation li {
-	float: left;
-	position: relative;
-}
+.main-navigation li {display: inline-flex;flex-basis:  inherit1;}
 
 .main-navigation a {
-	display: block;
 	text-decoration: none;
+	color: #333;
+	color: #888888;
+	margin: 0;
+	margin-right: 5px;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-radius: 30px;
+	font-size: 14px;
+	padding: 11px 23px;
+	line-height: 1.5;
 }
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+.main-navigation.toggled ul {display: inline;}
+.main-navigation.toggled ul {opacity: 1;height: auto;}
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
+		width: 100%;
+		font-weight: 400;
 	}
 }
 
@@ -854,26 +868,25 @@ object {
 
 /* Custom */
 .site-branding {
-	height: 190px;
-	width: 560px;
+	display: block;
+	margin: 0 auto;
+	transform: scale(.65);
 }
 
 .site-branding .logo-icon,
-.site-branding .logo-name {
-	display: inline-block;
-	float: left;
-	height: 190px;
+.site-branding .logo-name {display: inline-block;}
+
+.site-branding .logo-icon img,
+.site-branding .logo-name img {
 }
 
-.site-branding .logo-icon {
-	position: relative;
-	width: 190px;
-}
 
-.site-branding .logo-icon.rotate-icon .logo-wheel  img{
-	-webkit-animation:spin 1s linear;
-	-moz-animation:spin 1s linear;
-	animation:spin 1s linear;
+.site-branding .logo-icon {position: relative;}
+
+.site-branding .logo-icon.rotate-icon .logo-wheel img{
+	-webkit-animation: spin 1.5s cubic-bezier(0.31, 0.41, 0.75, 1.24);
+	-moz-animation:spin 1.5s cubic-bezier(0.31, 0.41, 0.75, 1.24);
+	animation: spin 1.5s cubic-bezier(0.31, 0.41, 0.75, 1.24);
 	animation-iteration-count: 1;
 }
 
@@ -881,29 +894,75 @@ object {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-.site-branding .logo-name {
-	width: 370px;
+@-moz-keyframes beatHeart {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	40% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
+@-webkit-keyframes beatHeart {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	40% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes beatHeart {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	40% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.site-branding .logo-name {
+}
 
 .site-branding .logo-name img {
-	margin: 27px 9px;
 }
 
 .site-branding .logo-icon .logo-arrow {
 	position: absolute;
-	bottom: 0;
-	left: 50%;
-	z-index: 5;
-	margin-left: -19px;
+	bottom: -19px;
+	left: 73px;
+	z-index: 100;
+	/* transform: translateX(-50%); */
 }
 
 .site-branding .logo-icon .logo-wheel {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
 }
 
 .site-header {
@@ -911,17 +970,13 @@ object {
 }
 
 .site-content {
-	margin: 60px 0;
+	margin: 60px 0 0;
 }
 
 .site-main h2 {
 	color: #777;
 	font-size: 24px;
 	line-height: 1.25;
-}
-
-.name-generator {
-	margin-bottom: 90px;
 }
 
 .name-generator-form {
@@ -971,4 +1026,126 @@ object {
 .name-generator-form button:hover {
 	background: #313638;
 	border-color: #313638;
+}
+
+/* Footer */
+.vertical-align {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.vertical-align > * {
+	align-items: center;
+}
+
+.footer {
+	padding: 20px 0;
+	bottom: 0;
+	width: 100%;
+	color: #FFFFFF;
+	background-color: #2c2c2c;
+}
+
+.footer .container, .footer .row {
+	height: 100%;
+}
+
+.name-generator-footer-nav .menu {
+	list-style: none;
+	margin :0;
+	padding: 0;
+}
+.name-generator-footer-nav .menu li {
+	display: inline;
+	margin-right: 15px;
+	word-break:  inherit;
+	word-wrap: unset;
+	white-space: nowrap;
+}
+
+.name-generator-footer-nav .menu li:last-child {
+	margin-right: 0;
+}
+
+.name-generator-footer-nav .menu li a {
+	color: #FFFFFF;
+}
+
+.name-generator-tagline p {
+	margin: 0;
+}
+
+.name-generator-tagline p span {
+	color: red;
+	will-change: scale;
+    -webkit-animation:     .8s infinite beatHeart;
+    -moz-animation:    .8s infinite beatHeart;
+    animation:     .8s infinite beatHeart;
+}
+
+.name-generator-tagline p a {
+	font-weight: 600;
+	color: #fff;
+}
+
+/*Search adjustments*/
+@media (min-width: 768px) {
+	#domainwheel_generator_root .ant-input-search > input {
+		height: 65px;
+		font-size: 25px;
+		padding-left: 20px;
+	}
+
+	#domainwheel_generator_root .ant-input-suffix > button {
+		height: 65px;
+		font-size: 25px;
+	}
+
+	#domainwheel_generator_root .ant-alert-icon {
+		top: 17px;
+	}
+}
+
+.primary-menu .current_page_item a {
+	background-color: #444;
+	border-radius: 30px;
+	color: #FFFFFF;
+}
+.name-generator-features h4 {
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 1.6;
+}
+.name-generator-features .anticon {
+	font-size: 50px;
+	opacity: .75;
+}
+
+@media( max-width: 769px ) {
+	.site-branding .logo-icon {
+		display: none;
+		float:none;
+	}
+	.site-branding {
+		width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	.site-branding .logo-name {
+		text-align: center;
+		margin: 0 auto;
+	}
+	.name-generator-features {
+		text-align: center;
+	}
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.site {
+	flex: 1;
 }

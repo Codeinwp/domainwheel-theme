@@ -25,7 +25,8 @@
 	<header id="masthead" class="site-header">
 		<div class="container">
             <div class="row">
-                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
+                <div class="col-md-12 text-center">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-link">
                     <div class="site-branding">
                         <div class="logo-icon">
                             <span class="logo-arrow">
@@ -41,32 +42,19 @@
                             <img src="<?php echo get_template_directory_uri() . '/img/logo-text.png';?>" alt="<?php
 	                        bloginfo( 'name' ); ?>"/>
                         </div>
-<!--		                --><?php
-//		                the_custom_logo();
-//		                if ( is_front_page() && is_home() ) : ?>
-<!--                            <h1 class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></h1>-->
-<!--		                --><?php //else : ?>
-<!--                            <p class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></p>-->
-<!--		                --><?php
-//		                endif;
-//
-//		                $description = get_bloginfo( 'description', 'display' );
-//		                if ( $description || is_customize_preview() ) : ?>
-<!--                            <p class="site-description">--><?php //echo $description; /* WPCS: xss ok. */ ?><!--</p>-->
-<!--		                --><?php
-//		                endif; ?>
                     </div><!-- .site-branding -->
+                    </a>
                 </div>
             </div>
 
             <?php if ( ! is_front_page() ) { ?>
             <div class="row">
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+                <div class="col-md-12 mt-5 text-center">
                     <nav id="site-navigation" class="main-navigation">
-                        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'namegenerator' ); ?></button>
+                        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="anticon anticon-menu-fold"></i></button>
                         <?php
                         wp_nav_menu( array(
-                            'theme_location' => 'menu-1',
+                            'theme_location' => 'primary-menu',
                             'menu_id'        => 'primary-menu',
                         ) );
                         ?>
@@ -80,4 +68,4 @@
 	<div id="content" class="site-content">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="col-xs-12 col-sm-10 offset-sm-1 pb-5 mb-3">

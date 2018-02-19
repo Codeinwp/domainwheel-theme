@@ -15,19 +15,21 @@ get_header(); ?>
 			<div class="name-generator">
 				<?php echo do_shortcode('[domainwheel_app]') ?>
 			</div>
-<?php /*
-			<div class="row">
-				<div class="col-xs-12 col-md-4">
-					<h2>1. Insert a keyword to generate new domain names.</h2>
+
+			<div class="row pt-5 name-generator-features">
+				<div class="col-sm-12 col-md-4 px-4 mt-4">
+                    <span class="anticon anticon-message mb-4 text-muted"></span>
+					<h4>1. Add a keyword to generate domain names.</h4>
 				</div>
-				<div class="col-xs-12 col-md-4">
-					<h2>2. Not happy? Add filters to narrow results.</h2>
+				<div class="col-sm-12 col-md-4 px-4 mt-4">
+                    <span class="anticon anticon-filter mb-4 text-muted"></span>
+					<h4>2. Not happy? Chose similar alternatives.</h4>
 				</div>
-				<div class="col-xs-12 col-md-4">
-					<h2>3. Success! Go get your new domain.</h2>
+				<div class="col-sm-12 col-md-4 px-4 mt-4">
+                    <span class="anticon anticon-like mb-4 text-muted"></span>
+					<h4>3. Success! Go get your new domain.</h4>
 				</div>
 			</div>
-*/ ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
