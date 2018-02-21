@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: namegenerator
@@ -572,7 +572,7 @@ a:hover, a:active {
 }
 
 /* Small menu. */
-.main-navigation .menu-primary-menu-container {
+.main-navigation .menu.nav-menu {
 	right: -100%;
 	transition: right .3s ease;
 	will-change: right;
@@ -581,7 +581,7 @@ a:hover, a:active {
 	padding: 10px 0;
 	z-index: 100;
 }
-.main-navigation.toggled .menu-primary-menu-container {
+.main-navigation.toggled .menu.nav-menu {
 	 display: block;
 	 right: 0;
 	 padding: 10px;
@@ -600,7 +600,7 @@ a:hover, a:active {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation .menu-primary-menu-container {
+	.main-navigation .menu.nav-menu {
 		 display: block;
 		right: inherit;;
 		position: static;
