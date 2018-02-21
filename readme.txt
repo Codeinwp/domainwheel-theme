@@ -28,6 +28,11 @@ Description
 namegenerator includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+= 1.0.2 - 2018-02-21  = 
+
+* Little tweaks
+
+
 = 1.0.0 - 2018-02-16  = 
 
 
