@@ -512,18 +512,16 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	width: 100%;
+	display: inline-block;
+	height: auto;
+	float: right;
 }
 
 .main-navigation ul {
-	position: static;
 	list-style: none;
-	margin: 0;
-	padding-left: 0;
-	opacity: 0;
 	transition: all.3s ease;
-	height: 0;
-	display: block;
+	display: inline-block;
+	float: right;
 }
 
 .main-navigation ul ul {
@@ -554,35 +552,67 @@ a:hover, a:active {
 	left: auto;
 }
 
-.main-navigation li {display: inline-flex;flex-basis:  inherit1;}
+.main-navigation li {
+    display: block;
+}
 
 .main-navigation a {
 	text-decoration: none;
 	color: #333;
-	color: #888888;
 	margin: 0;
-	margin-right: 5px;
 	background-color: transparent;
 	border: 1px solid transparent;
 	border-radius: 30px;
 	font-size: 14px;
-	padding: 11px 23px;
+	padding: 2px 10px;
+	font-weight: 500;
 	line-height: 1.5;
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {display: inline;}
+.main-navigation .menu-primary-menu-container {
+	right: inherit;
+	transition: inherit;
+	will-change: inherit;
+	position: static;
+	background-color: #fff;
+	padding: 30px;
+	z-index: 100;
+}
+.main-navigation.toggled .menu-primary-menu-container {
+	 display: block;
+	 right: 0;
+	 max-width: 350px;
+	 width: 350px;
+}
+.navbar {
+	position: fixed;
+	z-index: 100;
+	background: #fff;
+	border-bottom: 1px solid #eeeeee;
+	padding: 10px 0;
+}
 .main-navigation.toggled ul {opacity: 1;height: auto;}
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
+	.main-navigation .menu-primary-menu-container {
+		display: block;
+	}
 	.main-navigation ul {
-		display: flex;
-		width: 100%;
-		font-weight: 400;
+		margin: 0;
+		padding: 0;
+	}
+	.main-navigation li {
+		display: inline-block;
+	}
+	.navbar {
+		position: static;
+		padding: 0;
+		background: transparent;
+		border: none;
 	}
 }
 
@@ -948,25 +978,11 @@ object {
 	}
 }
 
-.site-branding .logo-name {
-}
-
-.site-branding .logo-name img {
-}
-
 .site-branding .logo-icon .logo-arrow {
 	position: absolute;
 	bottom: -19px;
 	left: 73px;
 	z-index: 100;
-	/* transform: translateX(-50%); */
-}
-
-.site-branding .logo-icon .logo-wheel {
-}
-
-.site-header {
-	margin-top: 60px;
 }
 
 .site-content {

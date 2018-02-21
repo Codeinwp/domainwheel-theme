@@ -1,17 +1,17 @@
 ( function( $ ) {
 
-    $(document).ready(function(){
+	$(document).ready(function(){
 
-        $('body').on( 'click', '.dw-submit', function(){
+		$('body').on( 'click', '.dw-submit', function(){
 
-            $('.logo-icon').addClass('rotate-icon').on(
-                "webkitAnimationEnd oanimationend msAnimationEnd animationend",
-                function() {
-                    $('.logo-icon').removeClass("rotate-icon");
-                }
-            );
-        });
-
-    })
+			$('.logo-icon').addClass('rotate-icon').on(
+				"webkitAnimationEnd oanimationend msAnimationEnd animationend",
+				function() {
+					$('.logo-icon').removeClass("rotate-icon");
+				}
+			);
+		});
+		$( '#domainwheel_generator_root' ).focus();
+	})
 
 } )( jQuery );

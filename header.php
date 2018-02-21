@@ -23,33 +23,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-link">
-                    <div class="site-branding">
-                        <div class="logo-icon">
-                            <span class="logo-arrow">
-                                <img src="<?php echo get_template_directory_uri() . '/img/logo-arrow.png';?>" alt="<?php
-                                bloginfo( 'name' ); ?>"/>
-                            </span>
-                            <span class="logo-wheel">
-                                <img src="<?php echo get_template_directory_uri() . '/img/logo-wheel.png';?>" alt="<?php
-                                bloginfo( 'name' ); ?>"/>
-                            </span>
-                        </div>
-                        <div class="logo-name">
-                            <img src="<?php echo get_template_directory_uri() . '/img/logo-text.png';?>" alt="<?php
-	                        bloginfo( 'name' ); ?>"/>
-                        </div>
-                    </div><!-- .site-branding -->
-                    </a>
-                </div>
-            </div>
-
-            <?php if ( ! is_front_page() ) { ?>
-            <div class="row">
-                <div class="col-md-12 mt-5 text-center">
+		<!-- Image and text -->
+		<div class="navbar">
+			<div class="container">
+				<div class="col-4 col-md-4 col-lg-3">
+					<a class="navbar-brand" href="<?php echo home_url(); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/logo_dw.jpg' ); ?>" alt="DomainWheel Logo">
+					</a>
+				</div>
+                <div class="col-8 col-md-8 col-lg-9">
                     <nav id="site-navigation" class="main-navigation">
                         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="anticon anticon-menu-fold"></i></button>
                         <?php
@@ -60,12 +42,12 @@
                         ?>
                     </nav><!-- #site-navigation -->
                 </div>
-            </div>
-            <?php } ?>
-        </div>
+			</div>
+		</div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-10 offset-sm-1 pb-5 mb-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 offset-sm-1 pb-5 mb-3">
