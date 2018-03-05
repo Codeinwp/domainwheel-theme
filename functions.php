@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'namegenerator_widgets_init' );
 function namegenerator_scripts() {
 	wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), '4.0.0' );
 
-	wp_enqueue_style( 'namegenerator-style', get_stylesheet_uri(), array(), '1.0.4' );
+	wp_enqueue_style( 'namegenerator-style', get_stylesheet_uri(), array(), '1.0.5' );
 
 	wp_enqueue_script( 'namegenerator-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
