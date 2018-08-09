@@ -1067,6 +1067,12 @@ object {
     border-color: #313638;
 }
 
+.trademark-info .ant-tooltip-content .ant-tooltip-inner {
+    text-align: center;
+    font-style: italic;
+    word-break: normal;
+}
+
 /* Footer */
 .vertical-align {
     display: flex;
