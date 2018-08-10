@@ -1073,6 +1073,55 @@ object {
     word-break: normal;
 }
 
+.ant-checkbox-group .ant-checkbox-group-item{
+    display: none;
+    font-size: 25px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-checkbox-group .ant-checkbox-group-item:first-child{
+    display: block;
+    margin-right: 0;
+    padding: 8px 0 0 8px;
+
+}
+
+.ant-checkbox-group {
+    height: 65px;
+    display: inline-block;
+    width: 110px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 72%;
+    border: 1px solid #fc7b74;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.ant-checkbox-group:hover {
+    border-color: #fc7b74;
+    height: auto;
+    z-index: 9999;
+}
+
+.ant-checkbox-group:hover .ant-checkbox-group-item:first-child {
+    padding: 8px 0 0 8px;
+}
+
+.ant-checkbox-group:hover .ant-checkbox-group-item  {
+    display: block;
+    margin-right: 0;
+    padding-left: 8px;
+    opacity: 1;
+}
+
+.ant-checkbox-group:hover .ant-checkbox-group-item:last-child  {
+    padding-bottom: 8px;
+}
+
 /* Footer */
 .vertical-align {
     display: flex;
