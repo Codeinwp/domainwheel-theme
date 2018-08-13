@@ -1073,53 +1073,58 @@ object {
     word-break: normal;
 }
 
-.ant-checkbox-group .ant-checkbox-group-item{
-    display: none;
-    font-size: 25px;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.65);
+.ant-input-affix-wrapper {
+    z-index: 1;
 }
 
-.ant-checkbox-group .ant-checkbox-group-item:first-child{
-    display: block;
-    margin-right: 0;
-    padding: 8px 0 0 8px;
-
+.select-tlds-checkbox-group::before {
+    content: "\25bc";
+    color: #fc7b74;
+    font-size: 20px;
+    position: absolute;
+    right: 16px;
+    top: -4px;
+    line-height: 64px;
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-out;
 }
 
-.ant-checkbox-group {
-    height: 65px;
+.select-tlds-checkbox-group {
+    height: 64px;
     display: inline-block;
-    width: 110px;
+    overflow: hidden;
     background-color: #FFFFFF;
     position: absolute;
-    left: 72%;
+    right: 200px;
+    top: 0;
     border: 1px solid #fc7b74;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    z-index: 1;
+    z-index: 2;
+    text-align: left;
+    padding: 4px 16px !important;
 }
 
-.ant-checkbox-group:hover {
+.select-tlds-checkbox-group:hover {
     border-color: #fc7b74;
     height: auto;
     z-index: 9999;
 }
 
-.ant-checkbox-group:hover .ant-checkbox-group-item:first-child {
-    padding: 8px 0 0 8px;
+.select-tlds-checkbox-group:hover:before {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-out;
 }
 
-.ant-checkbox-group:hover .ant-checkbox-group-item  {
+.select-tlds-checkbox-group .ant-checkbox-group-item {
     display: block;
-    margin-right: 0;
-    padding-left: 8px;
-    opacity: 1;
-}
-
-.ant-checkbox-group:hover .ant-checkbox-group-item:last-child  {
-    padding-bottom: 8px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
 }
 
 /* Footer */
@@ -1185,7 +1190,7 @@ object {
 }
 
 /*Search adjustments*/
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     #domainwheel_generator_root .ant-input-search > input {
         height: 65px;
         font-size: 25px;
@@ -1193,6 +1198,7 @@ object {
     }
 
     #domainwheel_generator_root .ant-input-suffix > button {
+        width: 200px;
         height: 65px;
         font-size: 25px;
     }
@@ -1223,7 +1229,7 @@ object {
     opacity: .75;
 }
 
-@media ( max-width: 769px ) {
+@media ( max-width: 768px ) {
     .dw-submit-search span {
         display: none;
     }
@@ -1251,6 +1257,39 @@ object {
     .main-navigation li a {
         font-size: 18px;
         line-height: 40px;
+    }
+
+    /*TLD phones option*/
+    .ant-layout-content {
+        padding-bottom: 200px;
+    }
+
+    .select-tlds-checkbox-group::before {
+        display: none;
+    }
+
+    .select-tlds-checkbox-group {
+        width: 100%;
+        display: inline-block;
+        height: auto;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        z-index: 1;
+    }
+
+    .select-tlds-checkbox-group .ant-checkbox-group-item {
+        display: inline-block;
+        width: 33%;
+        font-size: 18px;
+        margin-right: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    .select-tlds-checkbox-group .ant-checkbox-group-item .ant-checkbox {
+        transform: scale(1.5) !important;
     }
 
     /* Small menu. */
