@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.5
+Version: 1.0.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: namegenerator
@@ -1083,6 +1083,59 @@ object {
     z-index: 1;
 }
 
+/* Select TLDs option style*/
+.ant-input-affix-wrapper {
+    z-index: 1;
+}
+
+.select-tlds-checkbox-group::before {
+    content: "\25bc";
+    color: #fc7b74;
+    font-size: 20px;
+    position: absolute;
+    right: 16px;
+    top: -1px;
+    line-height: 64px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-out;
+}
+
+.select-tlds-checkbox-group {
+    height: 64px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 200px;
+    top: 0;
+    border: 1px solid #fc7b74;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 2;
+    text-align: left;
+    padding: 4px 16px !important;
+}
+
+.select-tlds-checkbox-group:hover {
+    border-color: #fc7b74;
+    height: auto;
+    z-index: 9999;
+}
+
+.select-tlds-checkbox-group:hover:before {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-out;
+}
+
+.select-tlds-checkbox-group .ant-checkbox-group-item {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+}
+
 /* Footer */
 .vertical-align {
     display: flex;
@@ -1146,7 +1199,7 @@ object {
 }
 
 /*Search adjustments*/
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     #domainwheel_generator_root .ant-input-search > input {
         height: 65px;
         font-size: 25px;
@@ -1154,6 +1207,7 @@ object {
     }
 
     #domainwheel_generator_root .ant-input-suffix > button {
+        width: 200px;
         height: 65px;
         font-size: 25px;
     }
@@ -1184,7 +1238,7 @@ object {
     opacity: .75;
 }
 
-@media ( max-width: 769px ) {
+@media ( max-width: 768px ) {
     .dw-submit-search span {
         display: none;
     }
@@ -1212,6 +1266,39 @@ object {
     .main-navigation li a {
         font-size: 18px;
         line-height: 40px;
+    }
+
+    /*TLD phones option*/
+    .ant-layout-content {
+        padding-bottom: 200px;
+    }
+
+    .select-tlds-checkbox-group::before {
+        display: none;
+    }
+
+    .select-tlds-checkbox-group {
+        width: 100%;
+        display: inline-block;
+        height: auto;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        z-index: 1;
+    }
+
+    .select-tlds-checkbox-group .ant-checkbox-group-item {
+        display: inline-block;
+        width: 33%;
+        font-size: 18px;
+        margin-right: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    .select-tlds-checkbox-group .ant-checkbox-group-item .ant-checkbox {
+        transform: scale(1.5) !important;
     }
 
     /* Small menu. */
