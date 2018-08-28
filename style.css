@@ -1069,7 +1069,6 @@ object {
 
 /* Keyword + Topic Box */
 #domainwheel_generator_root .ant-input-search > input {
-    border-bottom: 1px dashed #d9d9d9;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
