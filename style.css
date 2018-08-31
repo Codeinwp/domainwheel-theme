@@ -1253,10 +1253,6 @@ object {
     }
 
     /*TLD phones option*/
-    .ant-layout-content {
-        padding-bottom: 200px;
-    }
-
     .select-tlds-checkbox-group::before {
         display: none;
     }
@@ -1266,10 +1262,10 @@ object {
         display: inline-block;
         height: auto;
         border: none;
-        position: absolute;
+        position: relative;
         right: 0;
-        top: 40px;
         z-index: 1;
+        padding: 4px 4px 4px 20px !important;
     }
 
     .select-tlds-checkbox-group .ant-checkbox-group-item {
@@ -1312,6 +1308,16 @@ object {
         width: 100%;
         position: absolute;
         left: 0;
+    }
+}
+
+@media (max-width: 359px ) {
+    .select-tlds-checkbox-group {
+        padding: 4px 0 4px 10px  !important;
+    }
+
+    .select-tlds-checkbox-group .ant-checkbox-group-item {
+        font-size: 16px;
     }
 }
 
