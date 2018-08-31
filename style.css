@@ -1252,11 +1252,7 @@ object {
         line-height: 40px;
     }
 
-    /*TLD phones option*/
-    .ant-layout-content {
-        padding-bottom: 200px;
-    }
-
+    /*TLD Filter Style*/
     .select-tlds-checkbox-group::before {
         display: none;
     }
@@ -1266,10 +1262,10 @@ object {
         display: inline-block;
         height: auto;
         border: none;
-        position: absolute;
+        position: relative;
         right: 0;
-        top: 40px;
         z-index: 1;
+        padding: 4px 4px 4px 20px !important;
     }
 
     .select-tlds-checkbox-group .ant-checkbox-group-item {
@@ -1279,6 +1275,10 @@ object {
         margin-right: 0;
         padding: 10px 0;
         z-index: 1;
+    }
+
+    #domainwheel_generator_root .ant-alert-icon {
+        top: 17px;
     }
 
     .select-tlds-checkbox-group .ant-checkbox-group-item .ant-checkbox {
@@ -1312,6 +1312,65 @@ object {
         width: 100%;
         position: absolute;
         left: 0;
+    }
+}
+
+/* Search Results & Handpicked Style */
+@media ( min-width: 768px ) and ( max-width: 991px ) {
+
+    .results .ant-list-item-content .ant-alert, .handpicked .ant-list-item-content .ant-alert {
+        padding-right: 100px !important;
+        padding-left: 25px;
+    }
+
+    .results .ant-list-item-content .ant-btn, .handpicked .ant-list-item-content .ant-btn {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .results .ant-list-item-content .ant-alert-icon, .handpicked .ant-list-item-content .ant-alert-icon {
+        left: 5px;
+    }
+}
+
+@media (max-width: 480px ) {
+
+    .results .ant-list-item, .handpicked .ant-list-item {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .results .ant-list-item-content .ant-alert {
+        padding-right: 105px !important;
+    }
+
+    .results .ant-list-item-content .ant-btn, .handpicked .ant-list-item-content .ant-btn {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px ) {
+    .ant-layout h2 {
+        font-size: 22px;
+    }
+
+    .results .ant-list-item-content .ant-alert-icon, .handpicked .ant-list-item-content .ant-alert-icon {
+        display: none;
+    }
+
+    .results .ant-list-item-content .ant-alert, .handpicked .ant-list-item-content .ant-alert {
+        padding: 8px 98px 8px 5px !important;
+        font-size: 14px !important;
+        text-align: center;
+    }
+
+    .select-tlds-checkbox-group {
+        padding: 4px 0 4px 10px  !important;
+    }
+
+    .select-tlds-checkbox-group .ant-checkbox-group-item {
+        font-size: 16px;
     }
 }
 
