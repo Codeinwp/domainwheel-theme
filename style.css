@@ -1252,7 +1252,7 @@ object {
         line-height: 40px;
     }
 
-    /*TLD phones option*/
+    /*TLD Filter Style*/
     .select-tlds-checkbox-group::before {
         display: none;
     }
@@ -1275,6 +1275,10 @@ object {
         margin-right: 0;
         padding: 10px 0;
         z-index: 1;
+    }
+
+    #domainwheel_generator_root .ant-alert-icon {
+        top: 17px;
     }
 
     .select-tlds-checkbox-group .ant-checkbox-group-item .ant-checkbox {
@@ -1311,7 +1315,56 @@ object {
     }
 }
 
-@media (max-width: 359px ) {
+/* Search Results & Handpicked Style */
+@media ( min-width: 768px ) and ( max-width: 991px ) {
+
+    .results .ant-list-item-content .ant-alert, .handpicked .ant-list-item-content .ant-alert {
+        padding-right: 100px !important;
+        padding-left: 25px;
+    }
+
+    .results .ant-list-item-content .ant-btn, .handpicked .ant-list-item-content .ant-btn {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .results .ant-list-item-content .ant-alert-icon, .handpicked .ant-list-item-content .ant-alert-icon {
+        left: 5px;
+    }
+}
+
+@media (max-width: 480px ) {
+
+    .results .ant-list-item, .handpicked .ant-list-item {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .results .ant-list-item-content .ant-alert {
+        padding-right: 105px !important;
+    }
+
+    .results .ant-list-item-content .ant-btn, .handpicked .ant-list-item-content .ant-btn {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px ) {
+    .ant-layout h2 {
+        font-size: 22px;
+    }
+
+    .results .ant-list-item-content .ant-alert-icon, .handpicked .ant-list-item-content .ant-alert-icon {
+        display: none;
+    }
+
+    .results .ant-list-item-content .ant-alert, .handpicked .ant-list-item-content .ant-alert {
+        padding: 8px 98px 8px 5px !important;
+        font-size: 14px !important;
+        text-align: center;
+    }
+
     .select-tlds-checkbox-group {
         padding: 4px 0 4px 10px  !important;
     }
