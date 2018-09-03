@@ -1067,6 +1067,21 @@ object {
     border-color: #313638;
 }
 
+/* Pirate Forms Style */
+#pirate-forms-contact-checkbox {
+    float: left;
+    width: auto;
+    margin-top: 4px;
+}
+
+.pirate-forms-fields-container > div.pirate_forms_three_inputs_wrap > div.col-xs-12.col-sm-6.contact_name_wrap.pirate_forms_three_inputs.form_field_wrap {
+    float: left;
+}
+
+#d7ed404f4a > div.pirate-forms-fields-container > div.pirate_forms_three_inputs_wrap > div.col-xs-12.col-sm-6.contact_email_wrap.pirate_forms_three_inputs.form_field_wrap {
+    float:left;
+}
+
 /* Select TLDs option style*/
 .ant-input-affix-wrapper {
     z-index: 1;
@@ -1203,6 +1218,11 @@ object {
     .dw-desktop-hide {
         display: none !important;
     }
+
+    .featured-tags {
+        max-height: 100px;
+        overflow: hidden;
+    }
 }
 
 .primary-menu .current_page_item a {
@@ -1251,38 +1271,13 @@ object {
         font-size: 18px;
         line-height: 40px;
     }
-
-    /*TLD phones option*/
-    .ant-layout-content {
-        padding-bottom: 200px;
-    }
-
-    .select-tlds-checkbox-group::before {
-        display: none;
-    }
-
+    /* Hide TLDs option on mobile */
     .select-tlds-checkbox-group {
-        width: 100%;
-        display: inline-block;
-        height: auto;
-        border: none;
-        position: absolute;
-        right: 0;
-        top: 40px;
-        z-index: 1;
+        display: none !important;
     }
-
-    .select-tlds-checkbox-group .ant-checkbox-group-item {
-        display: inline-block;
-        width: 33%;
-        font-size: 18px;
-        margin-right: 0;
-        padding: 10px 0;
-        z-index: 1;
-    }
-
-    .select-tlds-checkbox-group .ant-checkbox-group-item .ant-checkbox {
-        transform: scale(1.5) !important;
+    /* Hide tags on mobile */
+    .featured-tags {
+        display: none;
     }
 
     /* Small menu. */
@@ -1312,6 +1307,12 @@ object {
         width: 100%;
         position: absolute;
         left: 0;
+    }
+}
+
+@media only screen  and (min-width: 320px)  and (max-width: 667px) {
+    .elementor-heading-title.elementor-size-medium {
+        display: none;
     }
 }
 
