@@ -1082,6 +1082,16 @@ object {
     float:left;
 }
 
+/* Scroll to top button style */
+.backtotop {
+    border-radius: 15px;
+    text-align: center;
+    font-size: 27px!important;
+    overflow: hidden;
+    color: #fff !important;
+    background-color: #ef4b47;
+}
+
 /* Select TLDs option style*/
 .ant-input-affix-wrapper {
     z-index: 1;
@@ -1223,6 +1233,10 @@ object {
         max-height: 100px;
         overflow: hidden;
     }
+
+    .backtotop {
+        right: 30px !important;
+    }
 }
 
 .primary-menu .current_page_item a {
@@ -1275,6 +1289,12 @@ object {
     /* Hide tags on mobile */
     .featured-tags {
         display: none;
+    }
+
+    .backtotop {
+        right: 0 !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
 
     /* TLDs option on mobile */
