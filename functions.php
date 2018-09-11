@@ -114,6 +114,18 @@ function namegenerator_widgets_init() {
 }
 add_action( 'widgets_init', 'namegenerator_widgets_init' );
 
+// Async load
+function namegenerator_async_scripts($url)
+{
+	if ( strpos( $url, '#asyncload') === false )
+		return $url;
+	else if ( is_admin() )
+		return str_replace( '#asyncload', '', $url );
+	else
+		return str_replace( '#asyncload', '', $url )."' async='async";
+}
+add_filter( 'clean_url', 'namegenerator_async_scripts', 11, 1 );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -132,6 +144,8 @@ function namegenerator_scripts() {
 
 	wp_enqueue_script( 'namegenerator-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),
 		true );
+
+	wp_enqueue_script('adsense','//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?async=async', array(), null, true);
 }
 add_action( 'wp_enqueue_scripts', 'namegenerator_scripts' );
 
