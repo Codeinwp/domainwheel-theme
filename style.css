@@ -1067,6 +1067,22 @@ object {
     border-color: #313638;
 }
 
+/* Trademark notification style*/
+.trademark-wrapper .ant-tooltip-content .ant-tooltip-inner {
+    text-align: center;
+    font-style: italic;
+    word-break: normal;
+}
+
+.trademark-status-warning .ant-alert-message strong {
+    position: relative;
+    z-index: 1;
+}
+
+.trademark-status-warning .ant-alert-message .ant-btn {
+    z-index: 1;
+}
+
 /* Pirate Forms Style */
 #pirate-forms-contact-checkbox {
     float: left;
@@ -1086,7 +1102,7 @@ object {
 .backtotop {
     border-radius: 15px;
     text-align: center;
-    font-size: 27px!important;
+    font-size: 27px !important;
     overflow: hidden;
     color: #fff !important;
     background-color: #ef4b47;
