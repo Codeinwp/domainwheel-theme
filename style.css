@@ -1496,3 +1496,19 @@ body {
     top: 0;
     text-align: left;
 }
+
+.select-tlds-checkbox-group{
+    right:155px
+}
+#domainwheel_generator_root .ant-input.ant-input-lg{
+
+    height: 64px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+#domainwheel_generator_root .dw-submit{
+    height:64px;
+}
+#domainwheel_generator_root .ant-btn.ant-input-search-button{
+    height:64px;
+}
