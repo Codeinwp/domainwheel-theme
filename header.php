@@ -39,7 +39,7 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BDVQZ2"
-	        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id="page" class="site">
@@ -50,7 +50,7 @@
 				<div class="brand-wrapper">
 					<a class="navbar-brand" href="<?php echo home_url(); ?>">
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/img/logo_dw.jpg' ); ?>"
-						     alt="DomainWheel Logo">
+							 alt="DomainWheel Logo">
 					</a>
 				</div>
 				<div class="nav-wrapper">

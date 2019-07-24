@@ -165,9 +165,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Add proper schema.org
  */
-function namegenerator_add_schema_json($data){
-   	echo '
-   	<h1>TEST SCHEMA</h1>
+function namegenerator_add_schema_json( $data ) {
+	echo '
 	<script type="application/ld+json">
 	{
     	"@context": "http://schema.org",

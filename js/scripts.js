@@ -12,6 +12,6 @@
 			);
 		});
 		$( '#domainwheel_generator_root' ).focus();
-	})
+	});
 
 } )( jQuery );
