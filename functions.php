@@ -197,8 +197,10 @@ function namegenerator_add_schema_json( $data ) {
     		"name": "Ionut Neagu"
     	},
     	"brand": {
+    		"@type": "Brand",
     		"name": "DomainWheel",  
-    		"url": "https://domainwheel.com"
+    		"url": "https://domainwheel.com",
+    		"logo": "' . get_template_directory_uri() . '/img/logo_dw.jpg"
     	}
 	}
     </script>';
