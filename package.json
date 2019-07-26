@@ -18,7 +18,9 @@
   },
   "devDependencies": {
     "grunt": "^1.0.2",
+    "grunt-phplint": "^0.1.0",
     "grunt-theme-fleet": "github:codeinwp/grunt-theme-fleet",
     "load-project-config": "~0.2.0"
-  }
+  },
+  "dependencies": {}
 }
