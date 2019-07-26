@@ -3,6 +3,19 @@
   "version": "1.0.2",
   "category": "themes",
   "license": "GPL-2.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codeinwp/domainwheel-theme.git"
+  },
+  "themeslug": "namegenerator",
+  "theme": {
+    "textdomain": "namegenerator"
+  },
+  "pot": {
+    "reportmsgidbugsto": "https://github.com/Codeinwp/domainwheel-theme/issues",
+    "languageteam": "Themeisle Translate <friends@themeisle.com>",
+    "lasttranslator": "Themeisle Translate Team <friends@themeisle.com>"
+  },
   "devDependencies": {
     "grunt": "^1.0.2",
     "grunt-theme-fleet": "github:codeinwp/grunt-theme-fleet",
