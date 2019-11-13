@@ -3,4 +3,4 @@ deploy:
     - 'mkdir:dist'
     - 'mkdir:artifact'
     - 'copy:full'
-    -  'compress:full'
+    - 'compress:full'
