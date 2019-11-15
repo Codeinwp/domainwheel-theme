@@ -10,3 +10,224 @@ Template:    neve
 License:     MIT
 License URI: http://opensource.org/licenses/mit-license.php
 */
+
+/*general*/
+html body {
+	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.site-logo a:hover {
+	opacity: 1;
+}
+
+.builder-item {
+	margin: 3px 0;
+}
+
+.row .primary-menu-ul>li:not(:last-child) {
+	padding-right: 0 !important;
+}
+.row .primary-menu-ul li a {
+	padding: 2px 10px;
+	font-weight: 500;
+    font-size: 14px;
+}
+.row .primary-menu-ul > li > a:hover,
+.row .primary-menu-ul > li > a:focus {
+    text-decoration: none;
+}
+.neve-main {
+	margin-top: 60px;
+}
+footer {
+	background-color: #2c2c2c;
+}
+footer img {
+	max-width: 25px;  
+    margin: 0 3px;
+}
+footer .component-wrap,
+footer .builder-item {
+	margin: 0;
+	padding: 0;
+    font-size: 14px;
+}
+.neve-main h2 {
+	color: #777;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+/*end*/
+
+/*Homepage*/
+.home .neve-main h1 {
+	font-size: 39px;
+	color: #202020;
+	text-align: center;
+	margin: 10px 0 24px;
+    line-height: 1;
+}
+.home .neve-main h4 {
+	text-align: center;
+	color: #000;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1;
+}
+#domainwheel_generator_root {
+	margin: 84px 0;
+	padding: 10px;
+}
+#domainwheel_generator_root input {
+	height: 64px;
+	padding-left: 15px;
+    font-size: 20px;
+}
+#domainwheel_generator_root .ant-input-search-button {
+	height: 64px;
+}
+.home .features .wp-block-column {
+	padding: 10px;
+}
+.home .features .wp-block-column:before {
+	content: '';
+	margin-bottom: 15px;
+	background-size: 50px 50px;
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    opacity: .35;
+}
+.home .features .wp-block-column:nth-child(1):before {
+	background-image: url(assets/img/search.svg);
+}
+.home .features .wp-block-column:nth-child(2):before {
+	background-image: url(assets/img/heart.svg);
+}
+.home .features .wp-block-column:nth-child(3):before {
+	background-image: url(assets/img/globe.svg);
+}
+.home .features h5 {
+	font-size: 20px;
+	color: #202020;
+	margin-bottom: 0.5em;
+}
+.home .features p {
+	color: #707070;
+	line-height: 2em;
+}
+.ant-input-affix-wrapper {
+    z-index: 1;
+}
+.ant-layout-content {
+	position: relative;
+}
+
+.select-tlds-checkbox-group::before {
+    content: "\25bc";
+    color: #fc7b74;
+    font-size: 20px;
+    position: absolute;
+    right: 16px;
+    top: -1px;
+    line-height: 64px;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.select-tlds-checkbox-group {
+    height: 64px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 155px;
+    top: 0;
+    border: 1px solid #fc7b74;
+    z-index: 2;
+    text-align: left;
+    padding: 4px 16px !important;
+}
+
+.select-tlds-checkbox-group:hover {
+    border-color: #fc7b74;
+    height: auto;
+    z-index: 9999;
+}
+
+.select-tlds-checkbox-group:hover:before {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.select-tlds-checkbox-group .ant-checkbox-group-item {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+}
+#domainwheel_generator_root .ant-alert-icon {
+	top: 17px;
+}
+#domainwheel_generator_root .ant-alert-message {
+	color: rgba(0, 0, 0, .65);
+}
+
+/*end*/
+
+/*other pages*/
+.nv-page-title {
+    border-bottom: none !important;
+}
+h1 {
+    font-size: 56px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.nv-page-title h1 {
+    text-align: center;
+}
+h1.entry-title {
+    color: #212529;
+    font-weight: 400;
+    text-align: center;
+}
+
+.wpforms-submit {
+    color: #fff !important;
+    background: #ff2911 !important;
+    border: none !important;
+    width: 100% !important;
+}
+.single .nv-meta-list {
+    display: none;
+}
+
+.nv-single-post-wrap .entry-header:first-child {
+    margin-top: 0;
+}
+
+/*end*/
+
+
+@media (min-width: 769px) {
+	.dw-desktop-hide {
+	    display: none !important;
+	}
+}
