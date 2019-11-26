@@ -1,7 +1,9 @@
 <?php
 /**
-Template Name: AMP iframe
+Template Name: AMP Results
  */
+
+$container_class = apply_filters( 'neve_container_class_filter', 'container', 'single-page' );
 
 get_header();
 
