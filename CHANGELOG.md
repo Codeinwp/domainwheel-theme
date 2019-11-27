@@ -1,4 +1,8 @@
 
+ ### v2.0.1 - 2019-11-27 
+ **Changes:** 
+ * Neve Child Theme Switch
+ 
  ### v1.0.2 - 2018-02-21 
  **Changes:** 
  * Little tweaks
