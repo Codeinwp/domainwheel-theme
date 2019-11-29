@@ -2,7 +2,7 @@
 Theme Name:  DomainWheel-Neve
 Theme URI:   https://domainwheel.com/
 Description: DomainWheel Neve Child Theme
-Version:     2.0.1
+Version:     2.0.2
 Author:      ThemeIsle
 Author URI:  https://themeisle.com/
 Text Domain: dw
@@ -310,8 +310,8 @@ h1.entry-title {
     height: 64px;
     padding-left: 15px;
     font-size: 20px;
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
+    -ms-flex-preferred-size: 100%;
+        -webkit-flex-basis: 100%;
             flex-basis: 100%;
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
@@ -485,6 +485,41 @@ h1.entry-title {
     }
     .single .nv-content-wrap.entry-content h3 {
         font-size: 18px;
+    }
+    /*results listings*/
+    #domainwheel_generator_root {
+        padding: 0;
+    }
+    .ant-list-grid .ant-col > .ant-list-item {
+        margin-bottom: 8px !important;
+    }
+    #domainwheel_generator_root .ant-alert-icon {
+        left: 7px !important;
+    }
+    #domainwheel_generator_root .ant-alert {
+        padding-left: 27px;
+    }
+    #domainwheel_generator_root .ant-alert-message strong {
+        font-size: 13px;
+    }
+    #domainwheel_generator_root .ant-alert-message button {
+        padding: 0 10px;
+    }
+    #domainwheel_generator_root .ant-card-body {
+        padding: 10px;
+    }
+    #domainwheel_generator_root .ant-card-body button {
+        margin: 5px 0 !important; 
+    }
+    #domainwheel_generator_root .ant-card-body button span {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    #domainwheel_generator_root .ant-card-head-title {
+        padding: 10px 0 !important;
+    }
+    #domainwheel_generator_root .ant-card-head {
+        min-height: 0 !important;
     }
 }
 
