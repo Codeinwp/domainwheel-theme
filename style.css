@@ -2,7 +2,7 @@
 Theme Name:  DomainWheel-Neve
 Theme URI:   https://domainwheel.com/
 Description: DomainWheel Neve Child Theme
-Version:     2.0.1
+Version:     2.0.2
 Author:      ThemeIsle
 Author URI:  https://themeisle.com/
 Text Domain: dw
@@ -310,8 +310,8 @@ h1.entry-title {
     height: 64px;
     padding-left: 15px;
     font-size: 20px;
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
+    -ms-flex-preferred-size: 100%;
+        -webkit-flex-basis: 100%;
             flex-basis: 100%;
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
