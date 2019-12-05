@@ -2,7 +2,7 @@
 Theme Name:  DomainWheel-Neve
 Theme URI:   https://domainwheel.com/
 Description: DomainWheel Neve Child Theme
-Version:     2.0.2
+Version:     2.0.3
 Author:      ThemeIsle
 Author URI:  https://themeisle.com/
 Text Domain: dw
@@ -305,13 +305,17 @@ h1.entry-title {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    position: relative;
 }
 #amp-dw input[type="search"] {
     height: 64px;
     padding-left: 15px;
     font-size: 20px;
     -ms-flex-preferred-size: 100%;
-        -webkit-flex-basis: 100%;
+            -webkit-flex-basis: 100%;
             flex-basis: 100%;
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
@@ -319,6 +323,18 @@ h1.entry-title {
     border-color: #fc7b74;
     box-shadow: 0 0 0 2px rgba(239, 75, 71, 0.2);
     outline: none;
+}
+#amp-dw input[type="search"]::-webkit-input-placeholder {
+    opacity: .5;
+}
+#amp-dw input[type="search"]::-moz-placeholder {
+    opacity: .5;
+}
+#amp-dw input[type="search"]:-ms-input-placeholder {
+    opacity: .5;
+}
+#amp-dw input[type="search"]:-moz-placeholder {
+    opacity: .5;
 }
 #amp-dw button[type="submit"] {
     width: 100%;
@@ -334,10 +350,28 @@ h1.entry-title {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    position: absolute;
+    right: 0;
 }
 #amp-dw button[type="submit"]:focus {
     outline: none;
 }
+#amp-dw .featured_tags_wrapper a {
+    padding: 0 7px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px dashed #d9d9d9;
+    color: rgba(0, 0, 0, 0.65);
+    margin: 4px;
+    display: inline-block;
+    transition: .3s ease all;
+}
+#amp-dw .featured_tags_wrapper a:hover,
+#amp-dw .featured_tags_wrapper a:focus {
+    color: #fc7b74;
+    border-color: #fc7b74;
+}
+
 @media (max-width: 768px) {
     #amp-dw {
         margin: 30px 0 0;
@@ -351,6 +385,9 @@ h1.entry-title {
     #amp-dw button[type="submit"] i {
         position: relative;
         top: 2px;
+    }
+    #amp-dw .featured_tags_wrapper {
+        display: none;
     }
 }
 /*end*/
