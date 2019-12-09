@@ -1,4 +1,8 @@
 
+ ### v2.0.3 - 2019-12-05 
+ **Changes:** 
+ * fix: switch to a simplified shortcode on homepage
+ 
  ### v2.0.2 - 2019-11-29 
  **Changes:** 
  * Development
