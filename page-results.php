@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: AMP Results
+Template Name: Results
  */
 
 $container_class = apply_filters( 'neve_container_class_filter', 'container', 'single-page' );
