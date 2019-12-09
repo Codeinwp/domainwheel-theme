@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DW_VERSION', '2.0.3' );
+define( 'DW_VERSION', '2.0.4' );
 
 /**
  * Load styles & scripts
@@ -28,9 +28,9 @@ add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
  * Add adsense code on results page
  */
 function namegenerator_add_adsense() {
-    if ( is_page_template( 'page-results.php' ) ) {
-        echo '<script data-ad-client="ca-pub-5203918029229367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
-    }
+	if ( is_page_template( 'page-results.php' ) ) {
+		echo '<script data-ad-client="ca-pub-5203918029229367" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
+	}
 }
 add_action( 'wp_head', 'namegenerator_add_adsense' );
 
