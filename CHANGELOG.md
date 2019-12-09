@@ -1,4 +1,8 @@
 
+ ### v2.0.4 - 2019-12-09 
+ **Changes:** 
+ * feat: add adsense code
+ 
  ### v2.0.3 - 2019-12-05 
  **Changes:** 
  * fix: switch to a simplified shortcode on homepage
