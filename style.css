@@ -124,11 +124,11 @@ footer .builder-item {
     height: 50px;
     opacity: .35;
 }
-.home .features .wp-block-column:nth-child(1):before
+.home .features .wp-block-column:nth-child(1):before,
 .page-template-page-shortcode .features .wp-block-column:nth-child(1):before {
 	background-image: url(assets/img/search.svg);
 }
-.home .features .wp-block-column:nth-child(2):before
+.home .features .wp-block-column:nth-child(2):before,
 .page-template-page-shortcode .features .wp-block-column:nth-child(2):before {
 	background-image: url(assets/img/heart.svg);
 }
