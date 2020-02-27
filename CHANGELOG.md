@@ -1,4 +1,8 @@
 
+ ### v2.0.5 - 2020-02-27 
+ **Changes:** 
+ * Development
+ 
  ### v2.0.4 - 2019-12-09 
  **Changes:** 
  * feat: add adsense code
