@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DW_VERSION', '2.0.4' );
+define( 'DW_VERSION', '2.0.5' );
 
 /**
  * Load styles & scripts
