@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DW_VERSION', '2.0.5' );
+define( 'DW_VERSION', '2.0.6' );
 
 /**
  * Load styles & scripts
@@ -65,7 +65,7 @@ add_action( 'init', 'namegenerator_premium_domains_cpt' );
 function namegenerator_premium_domains_shortcode( $atts ) {
 	$atts = shortcode_atts(
 				array(
-					'limit' => 8,
+					'limit' => 100,
 				),
 				$atts,
 				'domainwheel_premium_domains'
