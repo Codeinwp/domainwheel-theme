@@ -2,7 +2,7 @@
 Theme Name:  DomainWheel-Neve
 Theme URI:   https://domainwheel.com/
 Description: DomainWheel Neve Child Theme
-Version:     2.0.4
+Version:     2.0.5
 Author:      ThemeIsle
 Author URI:  https://themeisle.com/
 Text Domain: dw
@@ -56,6 +56,8 @@ footer img {
     width: 21px;
     height: 21px;
     margin: 0 3px;
+    position: relative;
+    top: 5px;
 }
 footer .component-wrap,
 footer .builder-item {
@@ -89,8 +91,9 @@ footer .builder-item {
 
 /*end*/
 
-/*Homepage*/
-.home .neve-main h1 {
+/*Homepage & pages where the shortcode exists*/
+.home .neve-main h1,
+.page-template-page-shortcode .neve-main h1 {
 	font-size: 39px;
 	color: #202020;
 	text-align: center;
@@ -98,7 +101,8 @@ footer .builder-item {
     line-height: 1;
     font-weight: 500;
 }
-.home .neve-main h4 {
+.home .neve-main h4,
+.page-template-page-shortcode .neve-main h4 {
 	text-align: center;
 	color: #000;
     font-size: 17px;
@@ -106,22 +110,12 @@ footer .builder-item {
     margin-bottom: 0;
     line-height: 1;
 }
-#domainwheel_generator_root {
-	margin: 84px 0 70px;
+.home .features .wp-block-column,
+.page-template-page-shortcode .features .wp-block-column {
 	padding: 10px;
 }
-#domainwheel_generator_root input {
-	height: 64px;
-	padding-left: 15px;
-    font-size: 20px;
-}
-#domainwheel_generator_root .ant-input-search-button {
-	height: 64px;
-}
-.home .features .wp-block-column {
-	padding: 10px;
-}
-.home .features .wp-block-column:before {
+.home .features .wp-block-column:before,
+.page-template-page-shortcode .features .wp-block-column:before {
 	content: '';
 	margin-bottom: 15px;
 	background-size: 50px 50px;
@@ -130,92 +124,38 @@ footer .builder-item {
     height: 50px;
     opacity: .35;
 }
-.home .features .wp-block-column:nth-child(1):before {
+.home .features .wp-block-column:nth-child(1):before
+.page-template-page-shortcode .features .wp-block-column:nth-child(1):before {
 	background-image: url(assets/img/search.svg);
 }
-.home .features .wp-block-column:nth-child(2):before {
+.home .features .wp-block-column:nth-child(2):before
+.page-template-page-shortcode .features .wp-block-column:nth-child(2):before {
 	background-image: url(assets/img/heart.svg);
 }
-.home .features .wp-block-column:nth-child(3):before {
+.home .features .wp-block-column:nth-child(3):before,
+.page-template-page-shortcode .features .wp-block-column:nth-child(3):before {
 	background-image: url(assets/img/globe.svg);
 }
-.home .features h5 {
+.home .features h5,
+.page-template-page-shortcode .features h5 {
 	font-size: 20px;
 	color: #202020;
 	margin-bottom: 0.5em;
     font-weight: 500;
 }
-.home .features p {
+.home .features p,
+.page-template-page-shortcode .features p  {
 	color: #707070;
 	line-height: 2em;
     font-size: 14px;
 }
-.ant-input-affix-wrapper {
-    z-index: 1;
+.premium-title {
+    font-weight: 500;
+    margin: 20px 0px;
+    color: #777;
+    line-height: 1.3;
+    font-size: 24px;
 }
-.ant-layout-content {
-	position: relative;
-}
-
-.select-tlds-checkbox-group::before {
-    content: "\25bc";
-    color: #fc7b74;
-    font-size: 20px;
-    position: absolute;
-    right: 16px;
-    top: -1px;
-    line-height: 64px;
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
-    transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-}
-
-.select-tlds-checkbox-group {
-    height: 64px;
-    display: inline-block;
-    overflow: hidden;
-    background-color: #FFFFFF;
-    position: absolute;
-    right: 155px;
-    top: 0;
-    border: 1px solid #fc7b74;
-    z-index: 2;
-    text-align: left;
-    padding: 4px 16px !important;
-}
-
-.select-tlds-checkbox-group:hover {
-    border-color: #fc7b74;
-    height: auto;
-    z-index: 9999;
-}
-
-.select-tlds-checkbox-group:hover:before {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
-    transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-}
-
-.select-tlds-checkbox-group .ant-checkbox-group-item {
-    display: block;
-    width: 100%;
-    font-size: 18px;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.65);
-}
-#domainwheel_generator_root .ant-alert-icon {
-	top: 17px;
-}
-#domainwheel_generator_root .ant-alert-message {
-	color: rgba(0, 0, 0, .65);
-}
-
 /*end*/
 
 /*other pages*/
@@ -298,97 +238,57 @@ h1.entry-title {
 }
 /*end*/
 
-/*AMP homepage form*/
-#amp-dw {
-    margin: 84px 0 70px;
-    padding: 10px;
+/*cpt premium domains section */
+.domainwheel_premium_domains_wrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    position: relative;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
 }
-#amp-dw input[type="search"] {
-    height: 64px;
-    padding-left: 15px;
-    font-size: 20px;
-    -ms-flex-preferred-size: 100%;
-            -webkit-flex-basis: 100%;
-            flex-basis: 100%;
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+.domainwheel_premium_domains_wrapper .premium-domain {
+    -webkit-flex-basis: 23%;
+        -ms-flex-preferred-size: 23%;
+            flex-basis: 23%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
 }
-#amp-dw input[type="search"]:focus {
-    border-color: #fc7b74;
-    box-shadow: 0 0 0 2px rgba(239, 75, 71, 0.2);
-    outline: none;
-}
-#amp-dw input[type="search"]::-webkit-input-placeholder {
-    opacity: .5;
-}
-#amp-dw input[type="search"]::-moz-placeholder {
-    opacity: .5;
-}
-#amp-dw input[type="search"]:-ms-input-placeholder {
-    opacity: .5;
-}
-#amp-dw input[type="search"]:-moz-placeholder {
-    opacity: .5;
-}
-#amp-dw button[type="submit"] {
-    width: 100%;
-    max-width: 156px;
-    height: 64px;
-    background: #ef4b47;
-    color: #fff;
-    padding: 0 15px;
-    font-size: 16px;
-    line-height: 1.5;
-    text-transform: capitalize;
-    font-weight: 400;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-    position: absolute;
-    right: 0;
-}
-#amp-dw button[type="submit"]:focus {
-    outline: none;
-}
-#amp-dw .featured_tags_wrapper a {
-    padding: 0 7px;
-    font-size: 14px;
-    border-radius: 4px;
+.domainwheel_premium_domains_wrapper .premium-domain img {
+    max-height: 90px;
     border: 1px dashed #d9d9d9;
+    border-radius: 4px;
+    padding: 15px;
+}
+.domainwheel_premium_domains_wrapper .premium-domain p {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 800;
+    margin: 5px 0 12px;
+    color: #ef4b47;
+}
+.dan-premium-link {
+    margin-left: auto;
+    font-size: 14px;
     color: rgba(0, 0, 0, 0.65);
-    margin: 4px;
-    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
     transition: .3s ease all;
 }
-#amp-dw .featured_tags_wrapper a:hover,
-#amp-dw .featured_tags_wrapper a:focus {
-    color: #fc7b74;
-    border-color: #fc7b74;
-}
-
-@media (max-width: 768px) {
-    #amp-dw {
-        margin: 30px 0 0;
-    }
-    #amp-dw button[type="submit"] {
-        width: auto;
-    }
-    #amp-dw button[type="submit"] span {
-        display: none;
-    }
-    #amp-dw button[type="submit"] i {
-        position: relative;
-        top: 2px;
-    }
-    #amp-dw .featured_tags_wrapper {
-        display: none;
-    }
+.dan-premium-link:hover,
+.dan-premium-link:focus {
+    color: #ef4b47;
+    opacity: .9;
+    border-color: #ef4b47;
 }
 /*end*/
 
@@ -433,6 +333,11 @@ h1.entry-title {
     .primary-menu-ul a:hover {
         text-decoration: none;
     }
+    .domainwheel_premium_domains_wrapper .premium-domain {
+        -webkit-flex-basis: 30%;
+            -ms-flex-preferred-size: 30%;
+                flex-basis: 30%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -445,40 +350,6 @@ h1.entry-title {
         padding: 3px;
         z-index: 2;
     }
-    .ant-dropdown {
-        left: 0 !important;
-    }
-    .select-tlds-checkbox-group {
-        height: auto;
-        position: relative;
-        padding: 5px 15px !important;
-        right: 0;
-    }
-    .select-tlds-checkbox-group .ant-dropdown-menu-group-item {
-        width: 25%;
-        font-size: 18px;
-        line-height: 1.5;
-        padding: 2px;
-        color: rgba(0,0,0,.65);
-    }
-    .ant-dropdown-trigger  {
-        height: 64px !important;
-        font-weight: 500 !important;
-    }
-    .ant-dropdown-menu-input {
-        height: auto !important;
-    }
-    .ant-dropdown-menu {
-        box-shadow: none !important;
-        top: 1px;
-        margin-right: 3px !important;
-    }
-    .dw-submit-search span,
-    .featured-tags,
-    .features,
-    .select-tlds-checkbox-group:before {
-        display: none;
-    }
     .neve-main {
         margin-top: 30px;
     }
@@ -486,34 +357,42 @@ h1.entry-title {
     .page-template-default:not(.home) .nv-content-wrap.entry-content {
         margin: 40px auto;
     }
-    #domainwheel_generator_root {
-        margin: 30px 0 0;
-    }
     .home .neve-main h1,
-    .home .neve-main h4 {
+    .home .neve-main h4,
+    .page-template-page-shortcode .neve-main h1,
+    .page-template-page-shortcode .neve-main h4 {
         max-width: 80%;
         margin-right: auto;
         margin-left: auto;
         line-height: normal;
     }
-    .home .neve-main h1 {
+    .home .neve-main h1,
+    .page-template-page-shortcode .neve-main h1 {
         font-size: 28px;
     }
-    .home .neve-main h4 {
+    .home .neve-main h4,
+    .page-template-page-shortcode .neve-main h4 {
         font-size: 16px;
     }
 }
 
-@media (min-width: 769px) {
-	.dw-desktop-hide {
-	    display: none !important;
-	}
+@media (max-width: 767px) {
+    .domainwheel_premium_domains_wrapper .premium-domain {
+        -webkit-flex-basis: 40%;
+            -ms-flex-preferred-size: 40%;
+                flex-basis: 40%;
+    }
+}
+
+@media (max-width: 600px) {
+    .domainwheel_premium_domains_wrapper .premium-domain {
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+    }
 }
 
 @media (max-width: 480px) {
-    .select-tlds-checkbox-group .ant-dropdown-menu-group-item {
-        width: 33%;
-    }
     h1 {
         font-size: 30px;
     }
@@ -522,46 +401,5 @@ h1.entry-title {
     }
     .single .nv-content-wrap.entry-content h3 {
         font-size: 18px;
-    }
-    /*results listings*/
-    #domainwheel_generator_root {
-        padding: 0;
-    }
-    .ant-list-grid .ant-col > .ant-list-item {
-        margin-bottom: 8px !important;
-    }
-    #domainwheel_generator_root .ant-alert-icon {
-        left: 7px !important;
-    }
-    #domainwheel_generator_root .ant-alert {
-        padding-left: 27px;
-    }
-    #domainwheel_generator_root .ant-alert-message strong {
-        font-size: 13px;
-    }
-    #domainwheel_generator_root .ant-alert-message button {
-        padding: 0 10px;
-    }
-    #domainwheel_generator_root .ant-card-body {
-        padding: 10px;
-    }
-    #domainwheel_generator_root .ant-card-body button {
-        margin: 5px 0 !important; 
-    }
-    #domainwheel_generator_root .ant-card-body button span {
-        font-size: 13px;
-        font-weight: 600;
-    }
-    #domainwheel_generator_root .ant-card-head-title {
-        padding: 10px 0 !important;
-    }
-    #domainwheel_generator_root .ant-card-head {
-        min-height: 0 !important;
-    }
-}
-
-@media (max-width: 360px) {
-    .select-tlds-checkbox-group .ant-dropdown-menu-group-item {
-        width: 50%;
     }
 }

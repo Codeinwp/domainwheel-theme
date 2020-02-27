@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DW_VERSION', '2.0.4' );
+define( 'DW_VERSION', '2.0.5' );
 
 /**
  * Load styles & scripts
@@ -33,6 +33,84 @@ function namegenerator_add_adsense() {
 	}
 }
 add_action( 'wp_head', 'namegenerator_add_adsense' );
+
+/**
+ * CPT for premium domains
+ */
+function namegenerator_premium_domains_cpt() {
+	register_post_type(
+		'premium-domains',
+		array(
+			'labels'              => array(
+				'name'          => __( 'Premium Domains', 'namegenerator' ),
+				'singular_name' => __( 'Premium Domain', 'namegenerator' ),
+			),
+			'public'              => true,
+			'hierarchical'        => false,
+			'menu_icon'           => 'dashicons-admin-site-alt3',
+			'has_archive'         => false,
+			'publicly_queryable'  => true,
+			'exclude_from_search' => true,
+			'menu_position'       => 3,
+			'show_in_rest'        => true,
+			'supports'            => array( 'title', 'custom-fields', 'thumbnail' ),
+		)
+	);
+}
+add_action( 'init', 'namegenerator_premium_domains_cpt' );
+
+/**
+ * Add [domainwheel_premium_domains] SCD
+ */
+function namegenerator_premium_domains_shortcode( $atts ) {
+	$atts = shortcode_atts(
+				array(
+					'limit' => 8,
+				),
+				$atts,
+				'domainwheel_premium_domains'
+			);
+
+	$output = '<div class="domainwheel_premium_domains_wrapper">';
+
+	$premium_domains_query_args = array(
+		'post_type'      => 'premium-domains',
+		'post_status'    => 'publish',
+		'posts_per_page' => (int) $atts['limit'],
+		'orderby'        => 'rand',
+	);
+		
+	$premium_domains_query = new WP_Query( $premium_domains_query_args );
+	if ( $premium_domains_query->have_posts() ) {
+		while ( $premium_domains_query->have_posts() ) {
+			$premium_domains_query->the_post(); 
+			
+			$domain_logo_path = get_stylesheet_directory_uri() . '/assets/img/premium-domains-placeholder.png';
+			if ( has_post_thumbnail() ) {
+				$domain_logo_path = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+			}
+
+			$domain_buy_link = 'https://dan.com/buy-domain/' . get_the_title();
+			if ( get_field( 'premium_domain_custom_link' ) ) {
+				$domain_buy_link = get_field( 'premium_domain_custom_link' );
+			}
+
+			$output .= '<div class="premium-domain">
+							<img src="' . $domain_logo_path . '">
+							<p>' . get_the_title() . '</p>
+							<a class="dan-premium-link" href="' . $domain_buy_link . '" target="_blank" rel="nofollow noopener">
+								Register Now $' . get_field( 'premium_domain_price' ) . '
+							</a>
+						</div>';
+		} 
+	} 
+	wp_reset_query();
+
+	$output .= '</div>';
+
+	return $output;
+}
+add_shortcode( 'domainwheel_premium_domains', 'namegenerator_premium_domains_shortcode' );
 
 /**
  * Add proper schema.org
