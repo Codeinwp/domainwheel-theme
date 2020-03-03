@@ -2,7 +2,7 @@
 Theme Name:  DomainWheel-Neve
 Theme URI:   https://domainwheel.com/
 Description: DomainWheel Neve Child Theme
-Version:     2.0.6
+Version:     2.0.7
 Author:      ThemeIsle
 Author URI:  https://themeisle.com/
 Text Domain: dw
@@ -256,7 +256,7 @@ h1.entry-title {
 }
 .domainwheel_premium_domains_wrapper .premium-domain {
     -ms-flex-preferred-size: 23%;
-        -webkit-flex-basis: 23%;
+            -webkit-flex-basis: 23%;
             flex-basis: 23%;
     margin: 10px;
     padding: 10px;
@@ -286,6 +286,14 @@ h1.entry-title {
     color: #ef4b47;
     opacity: .9;
     border-color: #ef4b47;
+}
+.dan-premium-link-img {
+    transition: .3s ease all;
+}
+.dan-premium-link-img:hover,
+.dan-premium-link-img:focus {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 /*end*/
 
@@ -332,7 +340,7 @@ h1.entry-title {
     }
     .domainwheel_premium_domains_wrapper .premium-domain {
         -ms-flex-preferred-size: 30%;
-            -webkit-flex-basis: 30%;
+                -webkit-flex-basis: 30%;
                 flex-basis: 30%;
     }
 }
@@ -375,17 +383,9 @@ h1.entry-title {
 
 @media (max-width: 767px) {
     .domainwheel_premium_domains_wrapper .premium-domain {
-        -ms-flex-preferred-size: 40%;
-            -webkit-flex-basis: 40%;
-                flex-basis: 40%;
-    }
-}
-
-@media (max-width: 600px) {
-    .domainwheel_premium_domains_wrapper .premium-domain {
-        -ms-flex-preferred-size: 100%;
-            -webkit-flex-basis: 100%;
-                flex-basis: 100%;
+        -ms-flex-preferred-size: 45%;
+                -webkit-flex-basis: 45%;
+                flex-basis: 45%;
     }
 }
 
@@ -396,7 +396,19 @@ h1.entry-title {
     .neve-main h2 {
         font-size: 20px;
     }
+    .premium-title {
+        margin-top: 40px;
+        font-size: 20px;
+    }
     .single .nv-content-wrap.entry-content h3 {
         font-size: 18px;
+    }
+    .domainwheel_premium_domains_wrapper .premium-domain {
+        -ms-flex-preferred-size: 100%;
+                -webkit-flex-basis: 100%;
+                flex-basis: 100%;
+    }
+    .domainwheel_premium_domains_wrapper .premium-domain img {
+        max-width: 70%;
     }
 }

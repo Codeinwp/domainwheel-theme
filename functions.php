@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DW_VERSION', '2.0.6' );
+define( 'DW_VERSION', '2.0.7' );
 
 /**
  * Load styles & scripts
@@ -96,10 +96,12 @@ function namegenerator_premium_domains_shortcode( $atts ) {
 			}
 
 			$output .= '<div class="premium-domain">
-							<img src="' . $domain_logo_path . '">
+							<a class="dan-premium-link-img" href="' . $domain_buy_link . '" target="_blank" rel="nofollow noopener">
+								<img src="' . $domain_logo_path . '">
+							</a>
 							<p>' . get_the_title() . '</p>
 							<a class="dan-premium-link" href="' . $domain_buy_link . '" target="_blank" rel="nofollow noopener">
-								Register Now $' . get_field( 'premium_domain_price' ) . '
+								Buy Now $' . get_field( 'premium_domain_price' ) . '
 							</a>
 						</div>';
 		} 
