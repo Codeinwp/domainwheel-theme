@@ -1,4 +1,8 @@
 
+ ### v2.0.7 - 2020-03-03 
+ **Changes:** 
+ * fix: premium domains adjustments
+ 
  ### v2.0.6 - 2020-02-27 
  **Changes:** 
  * fix: premium domains adjustments
