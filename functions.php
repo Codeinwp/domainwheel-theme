@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DW_VERSION', '2.0.7' );
+define( 'DW_VERSION', '2.0.8' );
 
 /**
  * Load styles & scripts
@@ -90,6 +90,11 @@ function namegenerator_premium_domains_shortcode( $atts ) {
 				$domain_logo_path = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 			}
 
+			$premium_domain_price = '';
+			if ( get_field( 'premium_domain_price' ) ) {
+				$premium_domain_price = ' $' . get_field( 'premium_domain_price' );
+			}
+
 			$domain_buy_link = 'https://dan.com/buy-domain/' . get_the_title();
 			if ( get_field( 'premium_domain_custom_link' ) ) {
 				$domain_buy_link = get_field( 'premium_domain_custom_link' );
@@ -101,7 +106,7 @@ function namegenerator_premium_domains_shortcode( $atts ) {
 							</a>
 							<p>' . get_the_title() . '</p>
 							<a class="dan-premium-link" href="' . $domain_buy_link . '" target="_blank" rel="nofollow noopener">
-								Buy Now $' . get_field( 'premium_domain_price' ) . '
+								Buy Now' . $premium_domain_price . '
 							</a>
 						</div>';
 		} 
